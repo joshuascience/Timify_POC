@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Timify POC</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="Author" content="">
+    <meta name="Robots" content="index,follow">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic,latin-ext">
+    <link rel="stylesheet" type="text/css" href="https://developers.timify.com/widget-library/widgets/dist.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <script type="text/javascript">
+        var backendUrl = '',
+            apiKey = '{__API_KEY__}',
+            appId = '{__APP_ID__}',
+            accountId = '{__ACCOUNT_ID__}',
+            accessToken = '{__ACCESS_TOKEN__}';
+    </script>
+</head>
+
+<body>
+    <timify:tabs uid="schedule-tabas">
+        <tab uid="client-form" label="Client Information">
+            <div class="client-form">
+                <div rel="client-form-message" class="text">Client Information</div>
+                <div class="field">
+                    <timify:textfield uid="name-field" label="Full name"></timify:textfield>
+                </div>
+
+                <div class="field">
+                    <timify:textfield uid="email-field" label="Email"></timify:textfield>
+                </div>
+
+                <div class="field">
+                    <timify:textfield uid="phone-field" label="Phone"></timify:textfield>
+                </div>
+                <div class="table-pyscologists">
+                    <table>
+                        <tr>
+                            <th>
+                                Andres Gomez
+                            </th>
+                            <th>
+                                <img>
+                            </th>
+                            <th>
+                                <timify:radio uid="radio" checked name="radio1">
+                                </timify:radio>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Mario Correa
+                            </th>
+                            <th>
+                                <img>
+                            </th>
+                            <th>
+                                <timify:radio uid="radio" checked name="radio1">
+                                </timify:radio>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="date-picker">
+                    <timify:datepicker label="Select a date" format="DD.MM.YYYY"></timify:datepicker>
+                </div>
+                <div>
+                    Horario Disponible
+                </div>
+                <div>
+                    <table>
+                        <th>
+                            <timify:radio uid="radio" name="radio-time">
+                                13:00
+                            </timify:radio>
+                        </th>
+                        <th>
+                            <timify:radio uid="radio" name="radio-time">
+                                9:00
+                            </timify:radio>
+                        </th>
+                        <th>
+                            <timify:radio uid="radio" name="radio-time">
+                                16:00
+                            </timify:radio>
+                        </th>
+                    </table>
+                </div>
+                <timify:button uid="submit-btn" full="true">Continue</timify:button>
+            </div>
+
+        </tab>
+
+    </timify:tabs>
+
+
+    <script type="text/javascript" src="https://developers.timify.com/widget-library/sdk/dist.js"></script>
+    <script type="text/javascript" src="https://developers.timify.com/widget-library/widgets/dist.js"></script>
+    <script type="text/javascript" src="assets/locales/en.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+
+</html>
